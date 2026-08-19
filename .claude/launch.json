@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sudeste-lp",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "-d", "sudeste-atacado-lp-agosto"],
+      "port": 8080
+    }
+  ]
+}
