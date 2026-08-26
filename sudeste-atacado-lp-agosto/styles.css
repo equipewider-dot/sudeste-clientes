@@ -239,3 +239,57 @@
 }
 .btn-ico{width:18px;height:18px;margin-right:10px;flex:0 0 auto}
 @media(max-width:760px){.btn-ico{width:16px;height:16px;margin-right:8px}}
+.hero .lead{color:#e6e6e6}
+.hero .lead strong{color:#f7941d;font-weight:700}
+
+/* Hero em fundo cinza chapado: sem foto e sem faixa laranja */
+.hero{background:#2c2c2b}
+.hero:after{display:none}
+.hero-photo{display:none}
+@media(max-width:760px){.hero-photo{display:none}}
+.hero-mark{display:none}
+
+/* Arte de produtos a direita do hero */
+.hero-grid{grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero-copy>*{max-width:100%}
+.hero-art{justify-self:center;max-width:520px}
+.hero-art img{display:block;width:100%;height:auto}
+@media(max-width:1080px){.hero-grid{grid-template-columns:1fr .85fr;gap:24px}}
+@media(max-width:760px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{max-width:380px;margin:26px auto 0}
+}
+
+/* Fundo do hero recriado a partir da arte de referencia:
+   preto profundo + brilho verde atras dos produtos + textura de pontos
+   + cunha laranja no canto inferior direito, atras da imagem. */
+.hero{
+  background-color:#080809;
+  background-image:
+    radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.2px),
+    radial-gradient(100% 85% at 78% 40%,rgba(23,190,100,.30) 0%,rgba(23,190,100,.10) 38%,transparent 66%),
+    radial-gradient(75% 80% at 4% 96%,rgba(23,190,100,.10) 0%,transparent 70%);
+  background-size:5px 5px,auto,auto;
+  background-repeat:repeat,no-repeat,no-repeat;
+}
+.hero:after{
+  display:block;content:"";position:absolute;left:auto;top:auto;right:0;bottom:0;
+  width:15%;height:58%;background:#f05a28;transform:none;
+  clip-path:polygon(100% 0,100% 100%,0 100%);z-index:0
+}
+@media(max-width:1080px){.hero:after{width:20%;height:48%}}
+@media(max-width:760px){.hero:after{display:block;width:42%;height:16%}}
+
+/* Hero no celular: arte logo apos o titulo e altura enxuta */
+@media(max-width:760px){
+  .hero{min-height:0}
+  .hero-grid{display:flex;flex-direction:column;align-items:stretch;padding:34px 0 40px;min-height:0;gap:0}
+  .hero-copy{display:contents}
+  .hero-copy .eyebrow{order:1;margin-bottom:14px}
+  .hero-copy h1{order:2}
+  .hero-art{order:3;max-width:330px;width:100%;margin:14px auto 20px}
+  .hero-copy .lead{order:4;margin:0 0 22px}
+  .hero-copy .actions{order:5;display:flex;flex-direction:column;gap:10px;width:100%}
+  .hero-copy .hero-note{order:6;margin-top:18px}
+  .hero:after{width:46%;height:14%}
+}
