@@ -237,3 +237,7 @@
   .lojas-grid{grid-template-columns:1fr;gap:44px}
   .loja p{margin-bottom:40px}
 }
+
+/* Banner unico da campanha (substitui o hero antigo) */
+.hero-banner{background:#0d3b2e;line-height:0}
+.hero-banner img{display:block;width:100%;height:auto}
