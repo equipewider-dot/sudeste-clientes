@@ -237,3 +237,5 @@
   .lojas-grid{grid-template-columns:1fr;gap:44px}
   .loja p{margin-bottom:40px}
 }
+.btn-ico{width:18px;height:18px;margin-right:10px;flex:0 0 auto}
+@media(max-width:760px){.btn-ico{width:16px;height:16px;margin-right:8px}}
